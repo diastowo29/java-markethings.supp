@@ -10,13 +10,6 @@
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
-    
-    <script src="/styles/js/jquery-1.10.2.js" type="text/javascript"></script>
-    <script> 
-    $(function(){
-      $("#includeSidebar").load("sidebar.html"); 
-    });
-    </script>
 
     <link rel="stylesheet" type="text/css" media="all" href="/styles/styles.css" />
 
@@ -367,13 +360,13 @@ But that's the difference in our opinions.</label>
 </div>
 
 </body>
+    <script src="/styles/js/jquery-1.10.2.js" type="text/javascript"></script>
+    
 	<script type="text/javascript">
-	
-	window.onload = function() {
+	$("#includeSidebar").load("sidebar.html", function() {
 		var d = document.getElementById("projectList");
 		d.className += " active";
-   	};
-	
+	});
 	</script>
 
     <!--   Core JS Files   -->

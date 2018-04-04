@@ -223,16 +223,13 @@
     <script src="/styles/js/jquery-1.10.2.js" type="text/javascript"></script>
 
 	<script type="text/javascript">
-
     $(function(){
-      $("#includeSidebar").load("sidebar.html"); 
+    	$("#includeSidebar").load("sidebar.html", function() {
+    		var d = document.getElementById("ongoing");
+    		d.className += " active";
+    		document.getElementById("collapse1").classList.remove("in");
+    	});
     });
-    
-	window.onload = function() {
-		var d = document.getElementById("ongoing");
-		d.className += " active";
-		document.getElementById("collapse1").classList.remove("in");
-   	};
    	</script>
 
     <!--   Core JS Files   -->
